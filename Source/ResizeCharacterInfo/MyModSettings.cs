@@ -5,13 +5,12 @@ namespace ResizeCharacterInfo
 {
     public class MyModSettings : ModSettings
     {
-        public const float DefaultBioLeftHeight = 355f;
-        public float bioLeftHeight = DefaultBioLeftHeight;
-        public string bioLeftHeightBuf;
+        public float bioHeightOffset = 0f;
+        public string bioHeightOffsetBuf;
 
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref bioLeftHeight, "height", DefaultBioLeftHeight);
+            Scribe_Values.Look(ref bioHeightOffset, "bioHeightOffset", 0f);
             base.ExposeData();
         }
 
@@ -20,8 +19,8 @@ namespace ResizeCharacterInfo
             var listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
             listingStandard.TextFieldNumericLabeled(
-                "ResizeCharacterInfo.BioLeftHeight".Translate(),
-                ref bioLeftHeight, ref bioLeftHeightBuf, 0f, 7680f);
+                "ResizeCharacterInfo.BioHeightOffset".Translate(),
+                ref bioHeightOffset, ref bioHeightOffsetBuf, 0f, 7680f);
             listingStandard.End();
         }
     }

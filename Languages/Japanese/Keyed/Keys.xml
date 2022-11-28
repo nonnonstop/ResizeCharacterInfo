@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-    <ResizeCharacterInfo.BioLeftHeight>略歴 高さ (デフォルト: 355)</ResizeCharacterInfo.BioLeftHeight>
+    <ResizeCharacterInfo.BioHeightOffset>略歴 高さ オフセット (デフォルト: 0)</ResizeCharacterInfo.BioHeightOffset>
 </LanguageData>
